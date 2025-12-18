@@ -5,6 +5,8 @@ This is the official implementation of the paper: **Modest-Align**.
 ## Introduction
 We propose a novel multimodal fusion method that leverages multi-distribution noise mixing to enhance robustness and alignment. Our code is based on the [LAVIS](https://github.com/salesforce/LAVIS) library.
 
+<img width="839" height="284" alt="image" src="https://github.com/user-attachments/assets/ce31aaca-a4c6-4e73-89eb-bc5484326c9c" />
+
 ## Installation
 
 1. (Optional) Creating conda environment
