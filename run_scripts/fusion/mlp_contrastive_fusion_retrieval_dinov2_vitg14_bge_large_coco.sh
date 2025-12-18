@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python evaluate.py --cfg-path lavis/projects/fusion/mlp_contrastive_fusion_retrieval_dinov2_vitg14_bge_large_coco.yaml
