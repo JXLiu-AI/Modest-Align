@@ -8,6 +8,7 @@ from lavis.models.base_model import BaseModel
 from lavis.models.fusion_models.fusion_outputs import FusionOutputFeatures, FusionOutput
 from lavis.models.fusion_models.utils import compute_sim_matrix, slerp
 
+
 class Block(nn.Module):
     def __init__(self, dim, expansion_factor=4, dropout=0.):
         super().__init__()
@@ -30,28 +31,19 @@ class MLPContrastiveFusion(BaseModel):
         "base": "configs/models/fusion_models/mlp_contrastive_fusion_base.yaml",
     }
 
-    def __init__(
-        self,
-        vis_embed_dim,
-        text_embed_dim,
-        proj_embed_dim,
-        proj_bias=True,
-        num_layers_vis=1,
-        num_layers_text=1,
-        expansion_factor=4,
-        dropout=0.,
-        unimodal_loss_coeff=1.0
-    ):
+    def __init__(self, vis_embed_dim, text_embed_dim, proj_embed_dim,
+                 proj_bias=True, num_layers_vis=1, num_layers_text=1,
+                 expansion_factor=4, dropout=0., unimodal_loss_coeff=1.0):
         super().__init__()
         self.vis_embed_dim = vis_embed_dim
         self.text_embed_dim = text_embed_dim
         self.proj_embed_dim = proj_embed_dim
         self.unimodal_loss_coeff = unimodal_loss_coeff
         self.mixup_alpha = -1
-
-        # ---------------------------
-        # Visual and text projection modules
-        # ---------------------------
+        # Soft Prompt
+        # self.soft_prompt_vis = nn.Parameter(torch.randn(prompt_length, vis_embed_dim) * 0.01)
+        # self.soft_prompt_text = nn.Parameter(torch.randn(prompt_length, text_embed_dim) * 0.01)
+        #############
         self.vis_proj = nn.Sequential(
             *[Block(vis_embed_dim, expansion_factor, dropout) for _ in range(num_layers_vis)],
             nn.LayerNorm(vis_embed_dim),
@@ -64,24 +56,9 @@ class MLPContrastiveFusion(BaseModel):
             nn.Linear(text_embed_dim, proj_embed_dim, bias=proj_bias),
         )
 
-        # Temperature parameter
         self.temp = nn.Parameter(0.07 * torch.ones([]))
-
-        self.prompt_length = 10
-        self.label_smoothing = 0.1
-
-        # ---------------------------
-        # Learnable noise scaling parameters (previously noise_level)
-        # ---------------------------
-        self.vis_noise_prompt = nn.Parameter(torch.tensor(0.1))
-        self.text_noise_prompt = nn.Parameter(torch.tensor(0.1))
-
-        # ---------------------------
-        # Key modification: "Mixing coefficients" for multi-distribution noise mixing
-        #   - Assuming 4 noise distributions, so defined as 4-dimensional
-        # ---------------------------
-        self.noise_mix_logits = nn.Parameter(torch.ones(4)) 
-        # Weights for each distribution will be learned via softmax during training
+        self.prompt_length=10
+        self.label_smoothing=0.1
 
     def proj_vis(self, vis_embed):
         return self.vis_proj(vis_embed)
@@ -89,81 +66,92 @@ class MLPContrastiveFusion(BaseModel):
     def proj_text(self, text_embed):
         return self.text_proj(text_embed)
 
+    # def forward(self, samples):
+    #     vis_embed = samples["vis_embed"]
+    #     text_embed = samples["text_embed"]
+
+    #     if self.mixup_alpha > 0:
+    #         assert vis_embed.size(0) % 2 == 0, "Batch size must be even for mixup."
+    #         lam = np.random.beta(self.mixup_alpha, self.mixup_alpha)
+    #         half = vis_embed.size(0) // 2
+    #         shuffle = torch.randperm(half, device=self.device)
+    #         vis_embed1, vis_embed2 = vis_embed[:half], vis_embed[half:]
+    #         text_embed1, text_embed2 = text_embed[:half], text_embed[half:]
+    #         vis_embed = lam * vis_embed1 + (1 - lam) * vis_embed2[shuffle]
+    #         text_embed = lam * text_embed1 + (1 - lam) * text_embed2[shuffle]
+
+    #     # Process embeddings
+    #     vis_embed_proj = self.proj_vis(vis_embed)
+    #     text_embed_proj = self.proj_text(text_embed)
+    #     vis_embed_proj_norm = F.normalize(vis_embed_proj, dim=-1)
+    #     text_embed_proj_norm = F.normalize(text_embed_proj, dim=-1)
+
+    #     sim_v2t = vis_embed_proj_norm @ text_embed_proj_norm.T / self.temp
+    #     sim_t2v = text_embed_proj_norm @ vis_embed_proj_norm.T / self.temp
+
+    #     bs = vis_embed_proj.size(0)
+    #     targets = torch.arange(bs, device=self.device)
+
+    #     # Compute losses using smooth labels if required
+    #     if self.label_smoothing > 0:
+    #         loss_fn = nn.KLDivLoss(reduction='batchmean')
+    #         smoothed_targets = F.one_hot(targets, num_classes=bs) * (1 - self.label_smoothing) + self.label_smoothing / bs
+    #         loss_v2t = loss_fn(F.log_softmax(sim_v2t, dim=1), smoothed_targets)
+    #         loss_t2v = loss_fn(F.log_softmax(sim_t2v, dim=1), smoothed_targets)
+    #     else:
+    #         loss_v2t = F.cross_entropy(sim_v2t, targets)
+    #         loss_t2v = F.cross_entropy(sim_t2v, targets)
+
+    #     loss = (loss_v2t + loss_t2v) / 2
+
+    #     return FusionOutput(
+    #         intermediate_output=FusionOutputFeatures(
+    #             vis_embeds=vis_embed,
+    #             vis_embeds_proj=vis_embed_proj,
+    #             text_embeds=text_embed,
+    #             text_embeds_proj=text_embed_proj,
+    #         ),
+    #         loss=loss,
+    #     )
     def forward(self, samples):
-        vis_embed = samples["vis_embed"]  # [B, vis_embed_dim]
-        text_embed = samples["text_embed"]  # [B, text_embed_dim]
-        device = vis_embed.device
+        vis_embed = samples["vis_embed"]
+        text_embed = samples["text_embed"]
 
-        # ------------------------------------------
-        # 1) Training phase: Inject noise based on multi-distribution mixing
-        # ------------------------------------------
+        # Add Gaussian noise (Normalization Disturbance) if training
         if self.training:
-            # Apply softmax to self.noise_mix_logits to get [alpha_Gauss, alpha_Uniform, alpha_Beta, alpha_Laplace]
-            mix_weights = F.softmax(self.noise_mix_logits, dim=0)
-            # E.g., mix_weights shape: [4], sum=1
+            noise_level = 0.01
+            vis_embed += noise_level * torch.randn_like(vis_embed)
+            text_embed += noise_level * torch.randn_like(text_embed)
 
-            # (a) Gaussian noise ~ Normal(0, 1)
-            noise_gauss = torch.randn_like(vis_embed)
-
-            # (b) Uniform noise ~ Uniform(-1, 1)
-            noise_uniform = torch.rand_like(vis_embed) * 2.0 - 1.0
-
-            # (c) Beta distribution(2,2) => [0,1], apply 2x-1 => [-1,1]
-            beta_dist = torch.distributions.Beta(2.0, 2.0)
-            noise_beta = 2.0 * beta_dist.sample(vis_embed.shape).to(device) - 1.0
-
-            # (d) Laplace noise ~ Laplace(0,1)
-            laplace_dist = torch.distributions.Laplace(0.0, 1.0)
-            noise_lap = laplace_dist.sample(vis_embed.shape).to(device)
-
-            # Weighted sum of 4 noise types: noise_mixed = alpha[0]*gauss + alpha[1]*uniform + ...
-            noise_vis = (
-                # mix_weights[0] * noise_gauss
-                # mix_weights[1] * noise_uniform
-                # mix_weights[2] * noise_beta
-                mix_weights[3] * noise_lap
-            )
-
-            # Apply the same operation to text embeddings
-            #   If you want to learn different mix coefficients for text and vision separately, you can use another logits
-            noise_text = (
-                # mix_weights[0] * torch.randn_like(text_embed)
-                # mix_weights[1] * (torch.rand_like(text_embed) * 2.0 - 1.0)
-                # mix_weights[2] * (2.0 * beta_dist.sample(text_embed.shape).to(device) - 1.0)
-                mix_weights[3] * laplace_dist.sample(text_embed.shape).to(device)
-            )
-
-            # Final noise injection: learnable noise scaling factor * mixed noise
-            vis_embed += self.vis_noise_prompt * noise_vis
-            text_embed += self.text_noise_prompt * noise_text
-
-        # ------------------------------------------
-        # 2) Mixup (Optional)
-        # ------------------------------------------
+        # Mixup implementation
         if self.mixup_alpha > 0 and self.training:
             lam = np.random.beta(self.mixup_alpha, self.mixup_alpha)
             batch_size = vis_embed.size(0)
-            index = torch.randperm(batch_size).to(device)
+            index = torch.randperm(batch_size).to(vis_embed.device)
             vis_embed = lam * vis_embed + (1 - lam) * vis_embed[index]
             text_embed = lam * text_embed + (1 - lam) * text_embed[index]
 
-        # ------------------------------------------
-        # 3) Projection + Normalization
-        # ------------------------------------------
         vis_embed_proj = self.proj_vis(vis_embed)
         text_embed_proj = self.proj_text(text_embed)
         vis_embed_proj_norm = F.normalize(vis_embed_proj, dim=-1)
         text_embed_proj_norm = F.normalize(text_embed_proj, dim=-1)
 
-        # Contrastive loss (InfoNCE)
         sim_v2t = vis_embed_proj_norm @ text_embed_proj_norm.T / self.temp
         sim_t2v = text_embed_proj_norm @ vis_embed_proj_norm.T / self.temp
 
         bs = vis_embed_proj.size(0)
-        targets = torch.arange(bs, device=device)
+        targets = torch.arange(bs, device=vis_embed.device)
 
-        loss_v2t = F.cross_entropy(sim_v2t, targets)
-        loss_t2v = F.cross_entropy(sim_t2v, targets)
+        # Label Smoothing
+        if self.label_smoothing > 0:
+            smoothed_targets = torch.full((bs, bs), self.label_smoothing / (bs - 1), device=vis_embed.device)
+            smoothed_targets.scatter_(1, targets.unsqueeze(1), 1 - self.label_smoothing)
+            loss_v2t = F.kl_div(F.log_softmax(sim_v2t, dim=1), smoothed_targets, reduction='batchmean')
+            loss_t2v = F.kl_div(F.log_softmax(sim_t2v, dim=1), smoothed_targets, reduction='batchmean')
+        else:
+            loss_v2t = F.cross_entropy(sim_v2t, targets)
+            loss_t2v = F.cross_entropy(sim_t2v, targets)
+
         loss = (loss_v2t + loss_t2v) / 2
 
         return FusionOutput(
@@ -184,9 +172,11 @@ class MLPContrastiveFusion(BaseModel):
         target = samples["label"]
 
         vis_embed_proj_norm = F.normalize(self.proj_vis(vis_embed), dim=-1)
+
         logits = 100.0 * vis_embed_proj_norm @ self.classifier
 
         return {"predictions": logits, "targets": target}
+
 
     @classmethod
     def from_config(cls, cfg):
@@ -212,7 +202,7 @@ class MLPContrastiveFusion(BaseModel):
             unimodal_loss_coeff=unimodal_loss_coeff,
         )
 
-        # If pretrained weights need to be loaded
+        # load pre-trained weights
         pretrain_path = cfg.get("pretrained", None)
         if pretrain_path is not None:
             msg = model.load_checkpoint(url_or_filename=pretrain_path)
