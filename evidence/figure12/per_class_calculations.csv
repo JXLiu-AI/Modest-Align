@@ -1,0 +1,92 @@
+dataset,method,seed,class,n,correct,recall_percent
+CheXpert,CLIP,,This is a ABNORMAL,27,22,81.48148148148148
+CheXpert,CLIP,,This is a NORMAL,18,3,16.666666666666668
+CheXpert,COCO_RP_ES,0,This is a ABNORMAL,27,24,88.88888888888889
+CheXpert,COCO_RP_ES,0,This is a NORMAL,18,3,16.666666666666668
+CheXpert,COCO_RP_ES,1,This is a ABNORMAL,27,27,100.0
+CheXpert,COCO_RP_ES,1,This is a NORMAL,18,0,0.0
+CheXpert,COCO_RP_ES,3,This is a ABNORMAL,27,27,100.0
+CheXpert,COCO_RP_ES,3,This is a NORMAL,18,2,11.11111111111111
+CheXpert,COCO_RP_ES,7,This is a ABNORMAL,27,0,0.0
+CheXpert,COCO_RP_ES,7,This is a NORMAL,18,16,88.88888888888889
+CheXpert,COCO_RP_ES,42,This is a ABNORMAL,27,23,85.18518518518519
+CheXpert,COCO_RP_ES,42,This is a NORMAL,18,2,11.11111111111111
+CheXpert,candidate_20240906195,42,This is a ABNORMAL,27,27,100.0
+CheXpert,candidate_20240906195,42,This is a NORMAL,18,0,0.0
+Shenzhen,CLIP,,This is a normal,12,0,0.0
+Shenzhen,CLIP,,This is a tuberculosis,35,35,100.0
+Shenzhen,COCO_RP_ES,0,This is a normal,12,0,0.0
+Shenzhen,COCO_RP_ES,0,This is a tuberculosis,35,35,100.0
+Shenzhen,COCO_RP_ES,1,This is a normal,12,0,0.0
+Shenzhen,COCO_RP_ES,1,This is a tuberculosis,35,35,100.0
+Shenzhen,COCO_RP_ES,3,This is a normal,12,0,0.0
+Shenzhen,COCO_RP_ES,3,This is a tuberculosis,35,35,100.0
+Shenzhen,COCO_RP_ES,7,This is a normal,12,0,0.0
+Shenzhen,COCO_RP_ES,7,This is a tuberculosis,35,35,100.0
+Shenzhen,COCO_RP_ES,42,This is a normal,12,0,0.0
+Shenzhen,COCO_RP_ES,42,This is a tuberculosis,35,35,100.0
+Shenzhen,candidate_20240906195,42,This is a normal,12,0,0.0
+Shenzhen,candidate_20240906195,42,This is a tuberculosis,35,35,100.0
+BrainTumor,CLIP,,This is a Glioblastoma Multiforme,41,41,100.0
+BrainTumor,CLIP,,This is a Primary Central Nervous System Lymphoma,16,0,0.0
+BrainTumor,COCO_RP_ES,0,This is a Glioblastoma Multiforme,41,41,100.0
+BrainTumor,COCO_RP_ES,0,This is a Primary Central Nervous System Lymphoma,16,0,0.0
+BrainTumor,COCO_RP_ES,1,This is a Glioblastoma Multiforme,41,40,97.5609756097561
+BrainTumor,COCO_RP_ES,1,This is a Primary Central Nervous System Lymphoma,16,1,6.25
+BrainTumor,COCO_RP_ES,3,This is a Glioblastoma Multiforme,41,41,100.0
+BrainTumor,COCO_RP_ES,3,This is a Primary Central Nervous System Lymphoma,16,0,0.0
+BrainTumor,COCO_RP_ES,7,This is a Glioblastoma Multiforme,41,13,31.70731707317073
+BrainTumor,COCO_RP_ES,7,This is a Primary Central Nervous System Lymphoma,16,15,93.75
+BrainTumor,COCO_RP_ES,42,This is a Glioblastoma Multiforme,41,5,12.195121951219512
+BrainTumor,COCO_RP_ES,42,This is a Primary Central Nervous System Lymphoma,16,15,93.75
+BrainTumor,candidate_20240906195,42,This is a Glioblastoma Multiforme,41,0,0.0
+BrainTumor,candidate_20240906195,42,This is a Primary Central Nervous System Lymphoma,16,16,100.0
+IDRiD,CLIP,,This is a mild nonproliferative retinopathy,7,0,0.0
+IDRiD,CLIP,,This is a moderate nonproliferative retinopathy,5,0,0.0
+IDRiD,CLIP,,This is a no apparent retinopathy,4,0,0.0
+IDRiD,CLIP,,This is a proliferative retinopathy,29,29,100.0
+IDRiD,CLIP,,This is a severe nonproliferative retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,0,This is a mild nonproliferative retinopathy,7,0,0.0
+IDRiD,COCO_RP_ES,0,This is a moderate nonproliferative retinopathy,5,0,0.0
+IDRiD,COCO_RP_ES,0,This is a no apparent retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,0,This is a proliferative retinopathy,29,28,96.55172413793103
+IDRiD,COCO_RP_ES,0,This is a severe nonproliferative retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,1,This is a mild nonproliferative retinopathy,7,0,0.0
+IDRiD,COCO_RP_ES,1,This is a moderate nonproliferative retinopathy,5,0,0.0
+IDRiD,COCO_RP_ES,1,This is a no apparent retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,1,This is a proliferative retinopathy,29,25,86.20689655172414
+IDRiD,COCO_RP_ES,1,This is a severe nonproliferative retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,3,This is a mild nonproliferative retinopathy,7,0,0.0
+IDRiD,COCO_RP_ES,3,This is a moderate nonproliferative retinopathy,5,0,0.0
+IDRiD,COCO_RP_ES,3,This is a no apparent retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,3,This is a proliferative retinopathy,29,28,96.55172413793103
+IDRiD,COCO_RP_ES,3,This is a severe nonproliferative retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,7,This is a mild nonproliferative retinopathy,7,7,100.0
+IDRiD,COCO_RP_ES,7,This is a moderate nonproliferative retinopathy,5,0,0.0
+IDRiD,COCO_RP_ES,7,This is a no apparent retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,7,This is a proliferative retinopathy,29,2,6.896551724137931
+IDRiD,COCO_RP_ES,7,This is a severe nonproliferative retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,42,This is a mild nonproliferative retinopathy,7,3,42.857142857142854
+IDRiD,COCO_RP_ES,42,This is a moderate nonproliferative retinopathy,5,0,0.0
+IDRiD,COCO_RP_ES,42,This is a no apparent retinopathy,4,0,0.0
+IDRiD,COCO_RP_ES,42,This is a proliferative retinopathy,29,28,96.55172413793103
+IDRiD,COCO_RP_ES,42,This is a severe nonproliferative retinopathy,4,0,0.0
+IDRiD,candidate_20240906195,42,This is a mild nonproliferative retinopathy,7,0,0.0
+IDRiD,candidate_20240906195,42,This is a moderate nonproliferative retinopathy,5,0,0.0
+IDRiD,candidate_20240906195,42,This is a no apparent retinopathy,4,0,0.0
+IDRiD,candidate_20240906195,42,This is a proliferative retinopathy,29,29,100.0
+IDRiD,candidate_20240906195,42,This is a severe nonproliferative retinopathy,4,0,0.0
+D&C,CLIP,,This is a Cat,31,31,100.0
+D&C,CLIP,,This is a Dog,32,32,100.0
+D&C,COCO_RP_ES,0,This is a Cat,31,31,100.0
+D&C,COCO_RP_ES,0,This is a Dog,32,32,100.0
+D&C,COCO_RP_ES,1,This is a Cat,31,31,100.0
+D&C,COCO_RP_ES,1,This is a Dog,32,32,100.0
+D&C,COCO_RP_ES,3,This is a Cat,31,31,100.0
+D&C,COCO_RP_ES,3,This is a Dog,32,32,100.0
+D&C,COCO_RP_ES,7,This is a Cat,31,31,100.0
+D&C,COCO_RP_ES,7,This is a Dog,32,32,100.0
+D&C,COCO_RP_ES,42,This is a Cat,31,31,100.0
+D&C,COCO_RP_ES,42,This is a Dog,32,32,100.0
+D&C,candidate_20240906195,42,This is a Cat,31,31,100.0
+D&C,candidate_20240906195,42,This is a Dog,32,32,100.0

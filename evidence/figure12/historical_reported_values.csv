@@ -1,0 +1,6 @@
+dataset,CLIP,Modest-Align,status
+CheXpert,53.33,77.21,Historical reported values; complete group-to-number calculation not recovered
+Shenzhen,74.47,60.21,Historical reported values; complete group-to-number calculation not recovered
+BrainTumor,71.93,62.78,Historical reported values; complete group-to-number calculation not recovered
+IDRiD,59.18,52.33,Historical reported values; complete group-to-number calculation not recovered
+D&C,100,67.31,Historical reported values; complete group-to-number calculation not recovered

@@ -1,0 +1,241 @@
+{
+  "cells": {
+    "BrainTumor": {
+      "CLIP": {
+        "None": {
+          "accuracy_percent": 71.9298245614035,
+          "balanced_accuracy_percent": 50.0,
+          "correct": 41
+        }
+      },
+      "COCO_RP_ES": {
+        "0": {
+          "accuracy_percent": 71.9298245614035,
+          "balanced_accuracy_percent": 50.0
+        },
+        "1": {
+          "accuracy_percent": 71.9298245614035,
+          "balanced_accuracy_percent": 51.90548896789551
+        },
+        "3": {
+          "accuracy_percent": 71.9298245614035,
+          "balanced_accuracy_percent": 50.0
+        },
+        "42": {
+          "accuracy_percent": 35.08771929824561,
+          "balanced_accuracy_percent": 52.97256112098694
+        },
+        "7": {
+          "accuracy_percent": 49.122807017543856,
+          "balanced_accuracy_percent": 62.72865831851959
+        }
+      },
+      "candidate_20240906195": {
+        "42": {
+          "accuracy_percent": 28.07017543859649,
+          "balanced_accuracy_percent": 50.0
+        }
+      }
+    },
+    "CheXpert": {
+      "CLIP": {
+        "None": {
+          "accuracy_percent": 55.55555555555556,
+          "balanced_accuracy_percent": 49.07407388091087,
+          "correct": 25
+        }
+      },
+      "COCO_RP_ES": {
+        "0": {
+          "accuracy_percent": 60.0,
+          "balanced_accuracy_percent": 52.77777835726738
+        },
+        "1": {
+          "accuracy_percent": 60.0,
+          "balanced_accuracy_percent": 50.0
+        },
+        "3": {
+          "accuracy_percent": 64.44444444444444,
+          "balanced_accuracy_percent": 55.55555559694767
+        },
+        "42": {
+          "accuracy_percent": 55.55555555555556,
+          "balanced_accuracy_percent": 48.148149624466896
+        },
+        "7": {
+          "accuracy_percent": 35.55555555555556,
+          "balanced_accuracy_percent": 44.44444477558136
+        }
+      },
+      "candidate_20240906195": {
+        "42": {
+          "accuracy_percent": 60.0,
+          "balanced_accuracy_percent": 50.0
+        }
+      }
+    },
+    "D&C": {
+      "CLIP": {
+        "None": {
+          "accuracy_percent": 100.0,
+          "balanced_accuracy_percent": 100.0,
+          "correct": 63
+        }
+      },
+      "COCO_RP_ES": {
+        "0": {
+          "accuracy_percent": 100.0,
+          "balanced_accuracy_percent": 100.0
+        },
+        "1": {
+          "accuracy_percent": 100.0,
+          "balanced_accuracy_percent": 100.0
+        },
+        "3": {
+          "accuracy_percent": 100.0,
+          "balanced_accuracy_percent": 100.0
+        },
+        "42": {
+          "accuracy_percent": 100.0,
+          "balanced_accuracy_percent": 100.0
+        },
+        "7": {
+          "accuracy_percent": 100.0,
+          "balanced_accuracy_percent": 100.0
+        }
+      },
+      "candidate_20240906195": {
+        "42": {
+          "accuracy_percent": 100.0,
+          "balanced_accuracy_percent": 100.0
+        }
+      }
+    },
+    "IDRiD": {
+      "CLIP": {
+        "None": {
+          "accuracy_percent": 59.183673469387756,
+          "balanced_accuracy_percent": 20.0,
+          "correct": 29
+        }
+      },
+      "COCO_RP_ES": {
+        "0": {
+          "accuracy_percent": 57.14285714285714,
+          "balanced_accuracy_percent": 19.310344457626343
+        },
+        "1": {
+          "accuracy_percent": 51.02040816326531,
+          "balanced_accuracy_percent": 17.241379022598267
+        },
+        "3": {
+          "accuracy_percent": 57.14285714285714,
+          "balanced_accuracy_percent": 19.310344457626343
+        },
+        "42": {
+          "accuracy_percent": 63.26530612244898,
+          "balanced_accuracy_percent": 27.881773114204407
+        },
+        "7": {
+          "accuracy_percent": 18.367346938775512,
+          "balanced_accuracy_percent": 21.379310339689255
+        }
+      },
+      "candidate_20240906195": {
+        "42": {
+          "accuracy_percent": 59.183673469387756,
+          "balanced_accuracy_percent": 20.0
+        }
+      }
+    },
+    "Shenzhen": {
+      "CLIP": {
+        "None": {
+          "accuracy_percent": 74.46808510638297,
+          "balanced_accuracy_percent": 50.0,
+          "correct": 35
+        }
+      },
+      "COCO_RP_ES": {
+        "0": {
+          "accuracy_percent": 74.46808510638297,
+          "balanced_accuracy_percent": 50.0
+        },
+        "1": {
+          "accuracy_percent": 74.46808510638297,
+          "balanced_accuracy_percent": 50.0
+        },
+        "3": {
+          "accuracy_percent": 74.46808510638297,
+          "balanced_accuracy_percent": 50.0
+        },
+        "42": {
+          "accuracy_percent": 74.46808510638297,
+          "balanced_accuracy_percent": 50.0
+        },
+        "7": {
+          "accuracy_percent": 74.46808510638297,
+          "balanced_accuracy_percent": 50.0
+        }
+      },
+      "candidate_20240906195": {
+        "42": {
+          "accuracy_percent": 74.46808510638297,
+          "balanced_accuracy_percent": 50.0
+        }
+      }
+    }
+  },
+  "coco_aggregates": {
+    "BrainTumor": {
+      "accuracy_percent": {
+        "mean": 59.999999999999986,
+        "sd": 17.07261842203911
+      },
+      "balanced_accuracy_percent": {
+        "mean": 53.52134168148041,
+        "sd": 5.302982986624988
+      }
+    },
+    "CheXpert": {
+      "accuracy_percent": {
+        "mean": 55.11111111111111,
+        "sd": 11.374652348506425
+      },
+      "balanced_accuracy_percent": {
+        "mean": 50.18518567085266,
+        "sd": 4.263282936727319
+      }
+    },
+    "D&C": {
+      "accuracy_percent": {
+        "mean": 100.0,
+        "sd": 0.0
+      },
+      "balanced_accuracy_percent": {
+        "mean": 100.0,
+        "sd": 0.0
+      }
+    },
+    "IDRiD": {
+      "accuracy_percent": {
+        "mean": 49.38775510204081,
+        "sd": 17.87317064964189
+      },
+      "balanced_accuracy_percent": {
+        "mean": 21.024630278348923,
+        "sd": 4.102948562669183
+      }
+    },
+    "Shenzhen": {
+      "accuracy_percent": {
+        "mean": 74.46808510638297,
+        "sd": 0.0
+      },
+      "balanced_accuracy_percent": {
+        "mean": 50.0,
+        "sd": 0.0
+      }
+    }
+  }
+}

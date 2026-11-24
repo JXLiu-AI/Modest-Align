@@ -1,0 +1,112 @@
+{
+  "legacy_evaluation_files": [
+    {
+      "rows": 2,
+      "sha256": "901b96557db7819107ae2cb5f603613b42bff907ad7cef77ed87b887f8aad696",
+      "source_id": "20241120044/evaluate.txt"
+    },
+    {
+      "rows": 1,
+      "sha256": "83b12fa27759baa26ae82035ec4fe50bf164c3d1b0c2f64e7962d4e122f1d6fa",
+      "source_id": "20241120055/evaluate.txt"
+    },
+    {
+      "rows": 6,
+      "sha256": "306dd6e91b032f00e2aea08d4e6cc465d082126002b3994e09608d183789628a",
+      "source_id": "20241121062/evaluate.txt"
+    },
+    {
+      "rows": 2,
+      "sha256": "745d342f4742a21f3077b0ad8d55c1caf2ad52a1707abaa9abc76f0e18d1d4d5",
+      "source_id": "20241121065/evaluate.txt"
+    },
+    {
+      "rows": 3,
+      "sha256": "ba992af0df41ac9eb712612991f1b8bf0c340b0bcb6fe26899df2cb7a764030c",
+      "source_id": "20241121072/evaluate.txt"
+    },
+    {
+      "rows": 2,
+      "sha256": "745d342f4742a21f3077b0ad8d55c1caf2ad52a1707abaa9abc76f0e18d1d4d5",
+      "source_id": "20241121074/evaluate.txt"
+    },
+    {
+      "rows": 1,
+      "sha256": "83b12fa27759baa26ae82035ec4fe50bf164c3d1b0c2f64e7962d4e122f1d6fa",
+      "source_id": "20241121103/evaluate.txt"
+    },
+    {
+      "rows": 2,
+      "sha256": "745d342f4742a21f3077b0ad8d55c1caf2ad52a1707abaa9abc76f0e18d1d4d5",
+      "source_id": "20241121104/evaluate.txt"
+    },
+    {
+      "rows": 3,
+      "sha256": "4f98a69b6d770a8de87f8a840d8bc9d76bdae831fe8d81ba4d0aa0339e9190d7",
+      "source_id": "20241121111/evaluate.txt"
+    },
+    {
+      "rows": 2,
+      "sha256": "d5dcfc1099c9c1673b05cc411e21a413934e31189a550503cba6bc68ef598cf4",
+      "source_id": "20241121112/evaluate.txt"
+    },
+    {
+      "rows": 2,
+      "sha256": "e93797a516151b6c441b7f1e68e3989d5f41a74221a9854816cb85c107a0260c",
+      "source_id": "20241121113/evaluate.txt"
+    },
+    {
+      "rows": 2,
+      "sha256": "39a2051e6a39c39c7e7069e1d792ddfb3f4ef3003e30273ac970aa300734243f",
+      "source_id": "20241121114/evaluate.txt"
+    },
+    {
+      "rows": 2,
+      "sha256": "bb008592c18b31ab2157761c0ec0dc204e6eb41952f62f5d5c66e09a492b981d",
+      "source_id": "20241121130/evaluate.txt"
+    },
+    {
+      "rows": 3,
+      "sha256": "0df2b0953c49439bc59bad6144945a5c63539621959e47522b07bfca22dd7537",
+      "source_id": "20241121131/evaluate.txt"
+    },
+    {
+      "rows": 1,
+      "sha256": "ec3230a5a53d827a48d7ff2dfbdbdd9c23eb00c32111f920315b373fb1c9c4c3",
+      "source_id": "20241122090/evaluate.txt"
+    },
+    {
+      "rows": 1,
+      "sha256": "ec3230a5a53d827a48d7ff2dfbdbdd9c23eb00c32111f920315b373fb1c9c4c3",
+      "source_id": "20241122141/evaluate.txt"
+    },
+    {
+      "rows": 1,
+      "sha256": "179becbe43e0048c33ec944ba684a7b6f28e2e977f16bbcfd494f3577789e94f",
+      "source_id": "20240808022/evaluate.txt"
+    }
+  ],
+  "source_disclosure": "Source hashes identify retained original files; internal paths, names and protected source copies are excluded.",
+  "source_documents": [
+    {
+      "sha256": "899f7613f9d460544b7fd60be55bae8f8bf70b2bc5fa4691f8555eca9840f2f1",
+      "source_id": "historical_figure12_asset"
+    },
+    {
+      "sha256": "ad0fa30fb34f829420157722ee802e747be460d760cb813ddf018aceb06b9064",
+      "source_id": "new_coco_summary_source"
+    },
+    {
+      "sha256": "105446dea5671da4e1cab725d788e0ec530eea6b9ba8bda2950b98d00fb5507a",
+      "source_id": "new_coco_prediction_source_before_public_id_redaction"
+    },
+    {
+      "sha256": "957bfce7ffebb4a290d2dc33413bf8bab7857e51a999692550febac80b0173b5",
+      "source_id": "candidate_full_evaluation_source_before_path_redaction"
+    },
+    {
+      "sha256": "1d9e90e36d37175e2d248551714153456e45c438ee2ba3aa1d5862736916a15e",
+      "source_id": "original_metric_trace_before_path_redaction"
+    }
+  ]
+}

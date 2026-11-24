@@ -1,0 +1,7 @@
+{
+  "arithmetic_dependencies": "Python standard library only",
+  "build_date_client_timezone": "2026-11-24 Asia/Seoul",
+  "matplotlib": "3.11.2",
+  "numpy": "2.5.4",
+  "python": "3.12.3"
+}

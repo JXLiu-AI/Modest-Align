@@ -1,0 +1,21 @@
+{
+  "cells_recomputed": 35,
+  "excluded": [
+    "private chats",
+    "reviewer correspondence",
+    "source medical images",
+    "medical image embeddings",
+    "image-content hashes",
+    "internal paths",
+    "credentials",
+    "model weights"
+  ],
+  "historical_five_value_calculation_reconstructed": false,
+  "interpretation": "PASS verifies the released arithmetic and package checks, not historical experimental provenance.",
+  "legacy_metric_rows": 36,
+  "privacy_method": "Structured allowlist transformation plus text-pattern scan and file-type allowlist.",
+  "score_records_recomputed": 1827,
+  "status": "PASS",
+  "text_vector_comparisons": 48,
+  "unit_tests": "7/7"
+}
