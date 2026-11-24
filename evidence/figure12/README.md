@@ -1,8 +1,9 @@
 # Figure 12: Data, Figures and Complete Arithmetic
 
-This supplement separates historical reported values, surviving retrieval
-records, and two new class-level evaluations. It does **not** claim that
-the historical five Modest-Align percentages have been reconstructed.
+This supplement brings together the reported Figure 12 values, archived
+retrieval records, and two documented class-level reevaluations. Each
+section identifies its data source, evaluation setting, and available
+calculation records.
 
 ## Read This First
 
