@@ -1,0 +1,181 @@
+{
+  "record_type": "Surviving historical logs and source excerpts, not reconstructed final-figure executions",
+  "retained_logs": [
+    {
+      "source_id": "20241120044/evaluate.txt",
+      "file": "retained_logs/20241120044/evaluate.txt",
+      "sha256": "901b96557db7819107ae2cb5f603613b42bff907ad7cef77ed87b887f8aad696",
+      "bytes": 596,
+      "metric_rows": 2,
+      "recorded_mtime_utc": "2024-11-20T04:52:45.415749+00:00"
+    },
+    {
+      "source_id": "20241120055/evaluate.txt",
+      "file": "retained_logs/20241120055/evaluate.txt",
+      "sha256": "83b12fa27759baa26ae82035ec4fe50bf164c3d1b0c2f64e7962d4e122f1d6fa",
+      "bytes": 312,
+      "metric_rows": 1,
+      "recorded_mtime_utc": "2024-11-20T05:58:21.103622+00:00"
+    },
+    {
+      "source_id": "20241121062/evaluate.txt",
+      "file": "retained_logs/20241121062/evaluate.txt",
+      "sha256": "306dd6e91b032f00e2aea08d4e6cc465d082126002b3994e09608d183789628a",
+      "bytes": 1872,
+      "metric_rows": 6,
+      "recorded_mtime_utc": "2024-11-21T06:26:05.962267+00:00"
+    },
+    {
+      "source_id": "20241121065/evaluate.txt",
+      "file": "retained_logs/20241121065/evaluate.txt",
+      "sha256": "745d342f4742a21f3077b0ad8d55c1caf2ad52a1707abaa9abc76f0e18d1d4d5",
+      "bytes": 624,
+      "metric_rows": 2,
+      "recorded_mtime_utc": "2024-11-21T06:56:20.699111+00:00"
+    },
+    {
+      "source_id": "20241121072/evaluate.txt",
+      "file": "retained_logs/20241121072/evaluate.txt",
+      "sha256": "ba992af0df41ac9eb712612991f1b8bf0c340b0bcb6fe26899df2cb7a764030c",
+      "bytes": 936,
+      "metric_rows": 3,
+      "recorded_mtime_utc": "2024-11-21T07:28:12.703744+00:00"
+    },
+    {
+      "source_id": "20241121074/evaluate.txt",
+      "file": "retained_logs/20241121074/evaluate.txt",
+      "sha256": "745d342f4742a21f3077b0ad8d55c1caf2ad52a1707abaa9abc76f0e18d1d4d5",
+      "bytes": 624,
+      "metric_rows": 2,
+      "recorded_mtime_utc": "2024-11-21T07:46:21.502136+00:00"
+    },
+    {
+      "source_id": "20241121103/evaluate.txt",
+      "file": "retained_logs/20241121103/evaluate.txt",
+      "sha256": "83b12fa27759baa26ae82035ec4fe50bf164c3d1b0c2f64e7962d4e122f1d6fa",
+      "bytes": 312,
+      "metric_rows": 1,
+      "recorded_mtime_utc": "2024-11-21T10:33:41.784129+00:00"
+    },
+    {
+      "source_id": "20241121104/evaluate.txt",
+      "file": "retained_logs/20241121104/evaluate.txt",
+      "sha256": "745d342f4742a21f3077b0ad8d55c1caf2ad52a1707abaa9abc76f0e18d1d4d5",
+      "bytes": 624,
+      "metric_rows": 2,
+      "recorded_mtime_utc": "2024-11-21T10:43:52.049234+00:00"
+    },
+    {
+      "source_id": "20241121111/evaluate.txt",
+      "file": "retained_logs/20241121111/evaluate.txt",
+      "sha256": "4f98a69b6d770a8de87f8a840d8bc9d76bdae831fe8d81ba4d0aa0339e9190d7",
+      "bytes": 606,
+      "metric_rows": 3,
+      "recorded_mtime_utc": "2024-11-21T11:19:37.940135+00:00"
+    },
+    {
+      "source_id": "20241121112/evaluate.txt",
+      "file": "retained_logs/20241121112/evaluate.txt",
+      "sha256": "d5dcfc1099c9c1673b05cc411e21a413934e31189a550503cba6bc68ef598cf4",
+      "bytes": 443,
+      "metric_rows": 2,
+      "recorded_mtime_utc": "2024-11-21T11:26:11.964056+00:00"
+    },
+    {
+      "source_id": "20241121113/evaluate.txt",
+      "file": "retained_logs/20241121113/evaluate.txt",
+      "sha256": "e93797a516151b6c441b7f1e68e3989d5f41a74221a9854816cb85c107a0260c",
+      "bytes": 475,
+      "metric_rows": 2,
+      "recorded_mtime_utc": "2024-11-21T11:36:51.945014+00:00"
+    },
+    {
+      "source_id": "20241121114/evaluate.txt",
+      "file": "retained_logs/20241121114/evaluate.txt",
+      "sha256": "39a2051e6a39c39c7e7069e1d792ddfb3f4ef3003e30273ac970aa300734243f",
+      "bytes": 475,
+      "metric_rows": 2,
+      "recorded_mtime_utc": "2024-11-21T11:49:44.226253+00:00"
+    },
+    {
+      "source_id": "20241121130/evaluate.txt",
+      "file": "retained_logs/20241121130/evaluate.txt",
+      "sha256": "bb008592c18b31ab2157761c0ec0dc204e6eb41952f62f5d5c66e09a492b981d",
+      "bytes": 520,
+      "metric_rows": 2,
+      "recorded_mtime_utc": "2024-11-21T13:08:59.656482+00:00"
+    },
+    {
+      "source_id": "20241121131/evaluate.txt",
+      "file": "retained_logs/20241121131/evaluate.txt",
+      "sha256": "0df2b0953c49439bc59bad6144945a5c63539621959e47522b07bfca22dd7537",
+      "bytes": 747,
+      "metric_rows": 3,
+      "recorded_mtime_utc": "2024-11-21T13:15:36.397344+00:00"
+    },
+    {
+      "source_id": "20241122090/evaluate.txt",
+      "file": "retained_logs/20241122090/evaluate.txt",
+      "sha256": "ec3230a5a53d827a48d7ff2dfbdbdd9c23eb00c32111f920315b373fb1c9c4c3",
+      "bytes": 260,
+      "metric_rows": 1,
+      "recorded_mtime_utc": "2024-11-22T09:06:57.260888+00:00"
+    },
+    {
+      "source_id": "20241122141/evaluate.txt",
+      "file": "retained_logs/20241122141/evaluate.txt",
+      "sha256": "ec3230a5a53d827a48d7ff2dfbdbdd9c23eb00c32111f920315b373fb1c9c4c3",
+      "bytes": 260,
+      "metric_rows": 1,
+      "recorded_mtime_utc": "2024-11-22T14:14:16.022943+00:00"
+    },
+    {
+      "source_id": "20240808022/evaluate.txt",
+      "file": "retained_logs/20240808022/evaluate.txt",
+      "sha256": "179becbe43e0048c33ec944ba684a7b6f28e2e977f16bbcfd494f3577789e94f",
+      "bytes": 278,
+      "metric_rows": 1,
+      "recorded_mtime_utc": "2024-11-18T02:55:24.965397+00:00"
+    }
+  ],
+  "source_excerpts": [
+    {
+      "source_id": "CLIP/cal.py",
+      "source_sha256": "5920d0fcf894b52fc4c6fd76d7917f776e9ef7e49e2bf59c6b85f44a1ca3b00f",
+      "file": "source_excerpts/CLIP__cal.py.calculate_accuracy.txt",
+      "first_line": 17,
+      "last_line": 79,
+      "excerpt_sha256": "c27005b6b9d2e50b5a01b3d1f7d15730512ea75eb72dd4a8636a329cfddfc2bf",
+      "recorded_mtime_utc": "2024-11-23T06:46:43.243604+00:00"
+    },
+    {
+      "source_id": "lavis/datasets/datasets/feature_pair_retrieval_dataset.py",
+      "source_sha256": "975b13a34575575c067f91b267237cb533962da590f9c2df8207fda38d740930",
+      "file": "source_excerpts/lavis__datasets__datasets__feature_pair_retrieval_dataset.py.__init__.txt",
+      "first_line": 7,
+      "last_line": 27,
+      "excerpt_sha256": "9a9da0dba561c3b31cbde5fee09e3f64702baee01556f12205fbac33a57e2d33",
+      "recorded_mtime_utc": "2024-11-18T02:55:21.693430+00:00"
+    },
+    {
+      "source_id": "lavis/models/fusion_models/utils.py",
+      "source_sha256": "58a990e5455352c728f7260f397f6e49e4ee101f3fc695ee90e12a5988417c44",
+      "file": "source_excerpts/lavis__models__fusion_models__utils.py.compute_sim_matrix.txt",
+      "first_line": 43,
+      "last_line": 85,
+      "excerpt_sha256": "519f2bc9ab37495dbba54761614a3ba5b1932c63a1dd1fb867b1cba243ad5c89",
+      "recorded_mtime_utc": "2024-11-21T10:43:39.946166+00:00"
+    },
+    {
+      "source_id": "lavis/tasks/retrieval.py",
+      "source_sha256": "bc82fb8a8ecf2ae00524cbb4839ded3e03ddf5c778df921f9c152141f6c18982",
+      "file": "source_excerpts/lavis__tasks__retrieval.py._report_metrics.txt",
+      "first_line": 68,
+      "last_line": 123,
+      "excerpt_sha256": "3f5badc78f23ac14174aeece0330f88d9bdf3e3781e314b3ce6c690e149db2e6",
+      "recorded_mtime_utc": "2024-11-21T10:33:24.801431+00:00"
+    }
+  ],
+  "scope": "Numeric logs are byte-identical to retained originals; code excerpts are exact line spans, not standalone runnable files",
+  "historical_final_figure_aggregation": "Not established by these retained files"
+}

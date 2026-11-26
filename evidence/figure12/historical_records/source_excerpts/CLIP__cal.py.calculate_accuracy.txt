@@ -1,0 +1,63 @@
+def calculate_accuracy(json_path):
+    # 读取JSON文件
+    with open(json_path, 'r') as f:
+        data = json.load(f)
+
+    correct_count = 0
+
+    for entry in data:
+        image_path = entry['image']
+        ground_truth_caption = entry['caption']
+
+        # 假设你有两个备选caption
+        captions = [
+
+            # "This is a severe nonproliferative retinopathy",
+            # "This is a no apparent retinopathy",
+            # "This is a mild nonproliferative retinopathy",
+            # "This is a proliferative retinopathy",
+            # "This is a moderate nonproliferative retinopathy",
+
+            # "This is a tuberculosis",
+            # "This is a normal"
+
+            # "This is a NORMAL",
+            # "This is a ABNORMAL"
+
+            # "This is a Dog",
+            # "This is a Cat"
+
+
+            "This is a Glioblastoma Multiforme",
+            "This is a Primary Central Nervous System Lymphoma"
+            
+        ]
+
+        # 加载图像和文本
+        image = preprocess_image(image_path)
+        text_tokens = clip.tokenize(captions).to(device)
+
+        # 计算相似度
+        with torch.no_grad():
+            image_features = model.encode_image(image)
+            text_features = model.encode_text(text_tokens)
+
+            # 归一化特征向量
+            image_features /= image_features.norm(dim=-1, keepdim=True)
+            text_features /= text_features.norm(dim=-1, keepdim=True)
+
+            # 计算余弦相似度
+            similarity = (image_features @ text_features.T).squeeze(0)
+            probabilities = similarity.softmax(dim=-1)
+
+        # 选择概率最高的caption
+        predicted_caption_index = probabilities.argmax().item()
+        predicted_caption = captions[predicted_caption_index]
+
+        # 与ground truth对比
+        if predicted_caption == ground_truth_caption:
+            correct_count += 1
+
+    # 计算准确率
+    accuracy = correct_count / len(data)
+    return accuracy

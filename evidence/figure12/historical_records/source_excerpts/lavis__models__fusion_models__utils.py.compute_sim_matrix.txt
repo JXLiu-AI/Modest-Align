@@ -1,0 +1,43 @@
+def compute_sim_matrix(model, data_loader, **kwargs):
+    if is_main_process():
+        logging.info("Computing features for evaluation...")
+        start_time = time.time()
+
+        # 1. 计算并归一化视觉嵌入
+        vis_embeds_proj_norm = []
+        for samples in data_loader:
+            vis_embed = samples["vis_embed"].to(model.device)
+            vis_embed_proj_norm = F.normalize(model.proj_vis(vis_embed), dim=-1)
+            vis_embeds_proj_norm.append(vis_embed_proj_norm)
+        vis_embeds_proj_norm = torch.cat(vis_embeds_proj_norm, dim=0)
+
+        # 2. 计算并归一化文本嵌入
+        text_feats = data_loader.dataset.text_feats_list
+        num_text = len(text_feats)
+        text_bs = 256  # 文本批量大小
+        text_embeds_proj_norm = []
+        for i in range(0, num_text, text_bs):
+            text_embed = torch.stack(text_feats[i: min(num_text, i + text_bs)]).to(model.device)
+            text_embed_proj_norm = F.normalize(model.proj_text(text_embed), dim=-1)
+            text_embeds_proj_norm.append(text_embed_proj_norm)
+        text_embeds_proj_norm = torch.cat(text_embeds_proj_norm, dim=0)
+
+        # 3. 分块计算矩阵相似度
+        chunk_size = 32  # 根据显存调整分块大小
+        sim_v2t_chunks = []
+        for vis_chunk in vis_embeds_proj_norm.split(chunk_size, dim=0):
+            sim_chunk = vis_chunk @ text_embeds_proj_norm.T
+            sim_v2t_chunks.append(sim_chunk)
+
+        # 合并分块结果
+        sim_v2t = torch.cat(sim_v2t_chunks, dim=0)
+        sim_t2v = sim_v2t.T
+
+        # 4. 记录时间并返回结果
+        total_time = time.time() - start_time
+        total_time_str = str(datetime.timedelta(seconds=int(total_time)))
+        logging.info("Evaluation time {}".format(total_time_str))
+
+        return sim_v2t.cpu().numpy(), sim_t2v.cpu().numpy()
+    else:
+        return None, None
