@@ -1,0 +1,272 @@
+{
+  "BrainTumor": {
+    "CLIP": {
+      "accuracy_percent": 71.9298245614035,
+      "balanced_accuracy_percent": 50.0,
+      "class_order": [
+        "This is a Glioblastoma Multiforme",
+        "This is a Primary Central Nervous System Lymphoma"
+      ],
+      "confusion_matrix": [
+        [
+          41,
+          0
+        ],
+        [
+          16,
+          0
+        ]
+      ],
+      "correct": 41,
+      "n": 57
+    },
+    "Modest-Align": {
+      "accuracy_percent": 71.9298245614035,
+      "balanced_accuracy_percent": 50.0,
+      "class_order": [
+        "This is a Glioblastoma Multiforme",
+        "This is a Primary Central Nervous System Lymphoma"
+      ],
+      "confusion_matrix": [
+        [
+          41,
+          0
+        ],
+        [
+          16,
+          0
+        ]
+      ],
+      "correct": 41,
+      "n": 57
+    }
+  },
+  "CheXpert": {
+    "CLIP": {
+      "accuracy_percent": 55.55555555555556,
+      "balanced_accuracy_percent": 49.074074074074076,
+      "class_order": [
+        "This is a ABNORMAL",
+        "This is a NORMAL"
+      ],
+      "confusion_matrix": [
+        [
+          22,
+          5
+        ],
+        [
+          15,
+          3
+        ]
+      ],
+      "correct": 25,
+      "n": 45
+    },
+    "Modest-Align": {
+      "accuracy_percent": 60.0,
+      "balanced_accuracy_percent": 52.77777777777778,
+      "class_order": [
+        "This is a ABNORMAL",
+        "This is a NORMAL"
+      ],
+      "confusion_matrix": [
+        [
+          24,
+          3
+        ],
+        [
+          15,
+          3
+        ]
+      ],
+      "correct": 27,
+      "n": 45
+    }
+  },
+  "D&C": {
+    "CLIP": {
+      "accuracy_percent": 100.0,
+      "balanced_accuracy_percent": 100.0,
+      "class_order": [
+        "This is a Cat",
+        "This is a Dog"
+      ],
+      "confusion_matrix": [
+        [
+          31,
+          0
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "correct": 63,
+      "n": 63
+    },
+    "Modest-Align": {
+      "accuracy_percent": 100.0,
+      "balanced_accuracy_percent": 100.0,
+      "class_order": [
+        "This is a Cat",
+        "This is a Dog"
+      ],
+      "confusion_matrix": [
+        [
+          31,
+          0
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "correct": 63,
+      "n": 63
+    }
+  },
+  "IDRiD": {
+    "CLIP": {
+      "accuracy_percent": 59.183673469387756,
+      "balanced_accuracy_percent": 20.0,
+      "class_order": [
+        "This is a mild nonproliferative retinopathy",
+        "This is a moderate nonproliferative retinopathy",
+        "This is a no apparent retinopathy",
+        "This is a proliferative retinopathy",
+        "This is a severe nonproliferative retinopathy"
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          29,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ]
+      ],
+      "correct": 29,
+      "n": 49
+    },
+    "Modest-Align": {
+      "accuracy_percent": 57.142857142857146,
+      "balanced_accuracy_percent": 19.310344827586206,
+      "class_order": [
+        "This is a mild nonproliferative retinopathy",
+        "This is a moderate nonproliferative retinopathy",
+        "This is a no apparent retinopathy",
+        "This is a proliferative retinopathy",
+        "This is a severe nonproliferative retinopathy"
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          28,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ]
+      ],
+      "correct": 28,
+      "n": 49
+    }
+  },
+  "Shenzhen": {
+    "CLIP": {
+      "accuracy_percent": 74.46808510638297,
+      "balanced_accuracy_percent": 50.0,
+      "class_order": [
+        "This is a normal",
+        "This is a tuberculosis"
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          35
+        ]
+      ],
+      "correct": 35,
+      "n": 47
+    },
+    "Modest-Align": {
+      "accuracy_percent": 74.46808510638297,
+      "balanced_accuracy_percent": 50.0,
+      "class_order": [
+        "This is a normal",
+        "This is a tuberculosis"
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          35
+        ]
+      ],
+      "correct": 35,
+      "n": 47
+    }
+  }
+}

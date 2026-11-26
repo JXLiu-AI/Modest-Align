@@ -1,0 +1,19 @@
+{
+  "checkpoint_selection": "Original Flickr30K retrieval criterion, not classification accuracy",
+  "completed_training_epochs": 500,
+  "depth_each_modality": 4,
+  "display_selection": "Exploratory post-hoc checkpoint illustration; no prespecified selection claim",
+  "dropout_training": 0.6,
+  "expansion_factor": 4,
+  "label_smoothing": 0.1,
+  "model_type": "modest_align_adapter",
+  "noise_level": 0.01,
+  "projection_dim": 512,
+  "selected_epoch": 202,
+  "source_checkpoint_sha256": "b7a80710c11ac050dc948dacb4710546374ed6ccf6a5c00574f0ade09e5f8e63",
+  "text_embed_dim": 1024,
+  "training_pairs": "566K COCO",
+  "training_seed": 0,
+  "vis_embed_dim": 1536,
+  "weights_contents": "Adapter tensor state only; no optimizer state or frozen encoder weights"
+}

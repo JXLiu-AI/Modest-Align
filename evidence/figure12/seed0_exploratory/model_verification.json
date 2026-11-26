@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "source_checkpoint_sha256": "b7a80710c11ac050dc948dacb4710546374ed6ccf6a5c00574f0ade09e5f8e63",
+  "public_model_source_sha256": "e887ce7871ffc73afa25efb16846456cae964d48ea7bbbc57e50fdacfb43a718",
+  "tensor_fingerprint": "968ff065f611690205adf664ae3edac6b1caec10f252b76e54976fbd6a36e006",
+  "cells": {
+    "BrainTumor": {
+      "n": 57,
+      "correct": 41,
+      "accuracy_percent": 71.9298245614035,
+      "balanced_accuracy_percent": 50.0,
+      "confusion_matrix": [
+        [
+          41,
+          0
+        ],
+        [
+          16,
+          0
+        ]
+      ]
+    },
+    "CheXpert": {
+      "n": 45,
+      "correct": 27,
+      "accuracy_percent": 60.0,
+      "balanced_accuracy_percent": 52.77777777777778,
+      "confusion_matrix": [
+        [
+          24,
+          3
+        ],
+        [
+          15,
+          3
+        ]
+      ]
+    },
+    "D&C": {
+      "n": 63,
+      "correct": 63,
+      "accuracy_percent": 100.0,
+      "balanced_accuracy_percent": 100.0,
+      "confusion_matrix": [
+        [
+          31,
+          0
+        ],
+        [
+          0,
+          32
+        ]
+      ]
+    },
+    "IDRiD": {
+      "n": 49,
+      "correct": 28,
+      "accuracy_percent": 57.142857142857146,
+      "balanced_accuracy_percent": 19.310344827586206,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          28,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0
+        ]
+      ]
+    },
+    "Shenzhen": {
+      "n": 47,
+      "correct": 35,
+      "accuracy_percent": 74.46808510638297,
+      "balanced_accuracy_percent": 50.0,
+      "confusion_matrix": [
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          35
+        ]
+      ]
+    }
+  },
+  "predictions_checked": 261,
+  "golden_synthetic_scores": [
+    [
+      -0.0575292706489563,
+      -0.03543093055486679,
+      -0.05889597162604332,
+      -0.031860530376434326
+    ],
+    [
+      -0.12522299587726593,
+      -0.12330709397792816,
+      -0.12773250043392181,
+      -0.12398681789636612
+    ],
+    [
+      -0.09748850762844086,
+      -0.09794754534959793,
+      -0.10075274109840393,
+      -0.09749962389469147
+    ]
+  ],
+  "weights_sha256": "6df22bca7bb1a9af2b50844e395537a1d73f117a9e223477d4caffd3e91432a5",
+  "weights_bytes": 441767204,
+  "tensor_count": 57,
+  "source_images_or_features_published": false
+}
