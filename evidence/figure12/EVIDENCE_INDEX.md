@@ -5,7 +5,11 @@
 Read [HISTORICAL_EVIDENCE.md](HISTORICAL_EVIDENCE.md) for retained original
 metric logs, exact code excerpts and source hashes. This documents what
 survives from the earlier project without inventing a missing run-to-number
-aggregation.
+aggregation. The authors' subsequent description of approximately 50 images
+per dataset, a multi-seed Modest-Align mean and a single CLIP evaluation is
+separately attributed in
+[HISTORICAL_AUTHOR_CLARIFICATION.md](HISTORICAL_AUTHOR_CLARIFICATION.md).
+It is not presented as an independently recovered historical run ledger.
 
 ## 2. New Evaluation And Complete Arithmetic
 

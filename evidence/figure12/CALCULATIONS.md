@@ -197,6 +197,8 @@ These formulas do not by themselves define class-level classification accuracy.
 ## 5. Historical percentages: limited arithmetic tests
 
 The current list sizes are NOT established as the historical denominators.
+The authors' account of approximately 50 images, a multi-seed Modest-Align mean and a single CLIP run is separately attributed in [HISTORICAL_AUTHOR_CLARIFICATION.md](HISTORICAL_AUTHOR_CLARIFICATION.md).
+The 3 x 50 column tests exactly three equal-weight runs of exactly 50 image queries each. Neither this exact seed count nor these exact denominators are established by that account.
 A failed test rejects only the specified counting hypothesis, not every possible aggregation.
 No grouping or averaging formula was invented to fit a published percentage.
 

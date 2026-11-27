@@ -7,6 +7,13 @@ calculation records.
 
 ## Read This First
 
+The authors' clarification of the original approximately-50-image subsets,
+multi-seed Modest-Align mean and single CLIP evaluation is recorded separately
+in [HISTORICAL_AUTHOR_CLARIFICATION.md](HISTORICAL_AUTHOR_CLARIFICATION.md).
+That procedural account is attributed to the authors; it does not turn the
+retained artifacts into a complete numerical reconstruction. The `3 x 50`
+test below is one specific hypothesis, not a test of all multi-seed protocols.
+
 | Material | What is established | What is not established |
 | --- | --- | --- |
 | Historical Figure-12 percentages | The numbers reported in the earlier manuscript | Exact group inputs, metric field and aggregation for all five values |

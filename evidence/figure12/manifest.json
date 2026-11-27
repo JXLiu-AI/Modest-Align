@@ -1,11 +1,11 @@
 {
   "algorithm": "SHA256",
-  "scope": "All released files except this manifest itself; ZIP hash is recorded separately.",
+  "scope": "Base arithmetic package and provenance guides; nested seed-0 files have their own release_manifest.json, and retained historical logs have historical_records/provenance.json.",
   "sha256": {
     ".gitignore": "dfccd2d4a57094f6702cf1f1c82dd86b390af24f9238e595bf8b3dfe86a7eafc",
-    "CALCULATIONS.md": "6e51dbb5dcfd767294f08e462d919645f2743925b4b13ff7559a0da4354addaa",
+    "CALCULATIONS.md": "05612afd275976bab77c16f66200033bc44553f17672063367f48c28f8215ee8",
     "PROTOCOL.md": "25e851d3eb71cbc2468931edafd0489514638262d747c2d9f4476b70afee971c",
-    "README.md": "af69fafe36469752b71a555ff32f7a44d099f2f78737fdc4871a3b99f6920c5d",
+    "README.md": "848689718e6fc364118ee9c94943b37c7e4ecd84658eb111b3c9df776c279034",
     "candidate_checkpoint.pdf": "1f274afff1fdd13239dc9052820ea8caa7152706409129c3ddb5d8fe52782d06",
     "candidate_checkpoint.png": "4696759c362bf699273c714f21b2a89b470c73845c0d1240ff56f6b21ac92001",
     "environment.json": "6e0471408cdb415eb3289c16e2825645385388ca76ca390f5005749ed2e33931",
@@ -26,13 +26,16 @@
     "protocol.json": "4a5246ddf71f5a795c9965fa207d0258e9aee98e4c74554487f5ebbbfe37c1f0",
     "provenance.json": "81659ae6605c2872843d7e35188ac1158233713c09cbe847ee8f2786f67580c4",
     "publication_checks.json": "1883d0c39870546bb0a76070c26e576c343a46a29b10c7c4f975bdbe8c026aa0",
-    "recompute.py": "8abd089ddfd8d23b7662d810487e7b47e58e23b83314403c389747805c6dc6b2",
+    "recompute.py": "44f991e31bf2d01df8b606e73c4a10fcd436d4048d037119239a59ed695df5b6",
     "requirements-figures.txt": "0a8b47ddc92915f16a905da39abd7fde1479ab8d5ec58f42a337afe2e0e3c288",
     "test_recompute.py": "7fafd2be476b52a098ee044007821ed7981a4e1558f84913dffb67b9305f6284",
     "text_cache_fingerprint.json": "90346c5131d9ae9a6c9efa9e82f0e16c33820473cfed44d9e6fb0744a0b60e82",
     "text_cache_identity.pdf": "8d36967133727da21cfb7ef94a8923d0465443daa045853963d2ab736fcb159e",
     "text_cache_identity.png": "fefb6132eecdd6edc94b3603623d63461714f38dbb5be5cdf2faccbf57e347de",
     "text_fingerprint_calculations.csv": "b9d0368153880a64854589d772be5b04bc7c61ba50aa9b320e9f1efff1879690",
-    "verified_results.json": "efcd73018b87ab686a9ec7e8deae0b25ada3e731180745017a82c684171f881c"
+    "verified_results.json": "efcd73018b87ab686a9ec7e8deae0b25ada3e731180745017a82c684171f881c",
+    "EVIDENCE_INDEX.md": "adb4496ecfafb50f21b6b9e369a9d5fedc326dd334cb6bae88c8d5094f5f7676",
+    "HISTORICAL_AUTHOR_CLARIFICATION.md": "fc87cfd879cb0506a193509db4d958a44a08ff097e2d7d2d705c340982c3a252",
+    "HISTORICAL_EVIDENCE.md": "4e46edba8652d5851cf2ee708a9454ee46843215e24fa335172a280de77722c8"
   }
 }

@@ -25,9 +25,13 @@ checkpoints. It is not a prespecified estimate or the five-seed mean; see
 `all_five_seeds.csv`. No general medical classification advantage is claimed.
 
 This is a documented new class-level evaluation, not a reconstruction of the
-original Figure 12 percentages. The original run-to-number aggregation is not
-established by the retained records. No historical resampling or multi-seed
-procedure is asserted here.
+original Figure 12 percentages. In the separately attributed
+[authors' clarification](HISTORICAL_AUTHOR_CLARIFICATION.md), the old subsets
+targeted approximately 50 images per dataset, Modest-Align used a multi-seed
+top-1 mean, and CLIP used a single classification-script evaluation. That
+account is distinct from the retained per-run evidence and from this new
+seed-0 evaluation. The exact old seed count and per-seed image lists are not
+established here; no historical per-seed resampling is asserted.
 
 ## Results
 

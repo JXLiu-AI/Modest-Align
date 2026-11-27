@@ -24,7 +24,17 @@ The logs and source code document genuine surviving experimental artifacts.
 They do not by themselves identify the exact image groups, checkpoint and
 aggregation that produced every historical Figure 12 percentage. A matching
 number from a different task is not treated as evidence for that figure.
-No undocumented historical seed-averaging or resampling procedure is asserted.
+
+## Authors' Clarification Of The Historical Procedure
+
+The authors subsequently clarified that the original subsets targeted
+approximately 50 images per dataset, depending on suitable images in each
+class, and that Modest-Align used a multi-seed top-1 mean whereas CLIP used
+a single classification-script evaluation. See
+[the attributed clarification](HISTORICAL_AUTHOR_CLARIFICATION.md).
+This is an author-supplied procedural account, not an independently recovered
+per-run ledger. The exact historical seed count and per-seed image lists are
+not established by the retained artifacts, and no per-seed resampling is asserted.
 
 ## New Documented Evaluation
 

@@ -2,8 +2,8 @@
   "revision_date": "2026-11-27",
   "files": {
     "README.md": {
-      "sha256": "c1cce1e892fff33002c464d645e4a52f0deaaf4057f053abdf9604db1f3b8efd",
-      "bytes": 4631
+      "sha256": "97a02ad03920f569a715d67bbda25dc732235c234220596c8864f4d6e5a3d84b",
+      "bytes": 4954
     },
     "adapter_model.py": {
       "sha256": "e887ce7871ffc73afa25efb16846456cae964d48ea7bbbc57e50fdacfb43a718",
@@ -84,6 +84,10 @@
     "verify_weights.py": {
       "sha256": "15fa5228208b67f9df76b6f9ecdd80d19c62fca52ab3eafc130ba30931c6f474",
       "bytes": 1719
+    },
+    "HISTORICAL_AUTHOR_CLARIFICATION.md": {
+      "sha256": "fc87cfd879cb0506a193509db4d958a44a08ff097e2d7d2d705c340982c3a252",
+      "bytes": 2003
     }
   },
   "external_weights": {
