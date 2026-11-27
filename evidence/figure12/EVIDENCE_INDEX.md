@@ -32,3 +32,13 @@ This COCO 566K-pair checkpoint is distinct from the 3.5M-pair main setting.
 Arithmetic reproduction uses the released scores. Independent image-to-score
 inference additionally requires the corresponding authorized images and frozen
 encoders; protected medical images and private file mappings are not included.
+
+## 3. Verified Adapter Weights
+
+The tensor-only COCO seed-0 adapter is publicly available on
+[Hugging Face](https://huggingface.co/AlexLiu2023/Modest-Align-COCO-seed0/tree/7903592a3b9d44614eea90e7ac62ea979f4a14f0).
+The public Hub file size and LFS SHA-256 match the audited local export:
+441,767,204 bytes, SHA-256
+`6df22bca7bb1a9af2b50844e395537a1d73f117a9e223477d4caffd3e91432a5`.
+All 57 tensors and a deterministic synthetic inference fixture were checked
+before upload. Frozen encoder weights and medical images are not included.

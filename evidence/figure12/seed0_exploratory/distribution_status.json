@@ -1,6 +1,10 @@
 {
   "revision_date": "2026-11-27",
-  "status": "Weights pending verified hosting; code and scores do not imply weight availability",
-  "weights_hosted": false,
-  "weights_repository": null
+  "status": "Public weight size and LFS SHA-256 verified against the audited tensor export",
+  "weights_hosted": true,
+  "weights_repository": "https://huggingface.co/AlexLiu2023/Modest-Align-COCO-seed0",
+  "weights_revision": "7903592a3b9d44614eea90e7ac62ea979f4a14f0",
+  "weights_filename": "model.safetensors",
+  "weights_sha256": "6df22bca7bb1a9af2b50844e395537a1d73f117a9e223477d4caffd3e91432a5",
+  "weights_bytes": 441767204
 }

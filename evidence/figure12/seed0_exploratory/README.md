@@ -92,14 +92,15 @@ Raw medical images, medical image embeddings, private file-path mappings,
 image-content hashes and private correspondence are not distributed. Exact
 pixel-level reproduction of the small subsets therefore requires authorized
 source images and the original private mapping; the public score arithmetic
-alone is not a pixel-level reproduction. Once the separately hosted weights are
-available, readers can test the adapter on their own authorized images/features. Obtain the appropriate source
+alone is not a pixel-level reproduction. The verified adapter weights are
+available on [Hugging Face](https://huggingface.co/AlexLiu2023/Modest-Align-COCO-seed0/tree/7903592a3b9d44614eea90e7ac62ea979f4a14f0).
+Readers can test the adapter on their own authorized images/features. Obtain the appropriate source
 data permissions separately.
 
-When distributed, the Safetensors file contains only the adapter tensor state, not optimizer
+The released Safetensors file contains only the adapter tensor state, not optimizer
 state or executable pickle content. `config.json` identifies the source
 checkpoint by SHA-256; `release_manifest.json` verifies the distributed files.
-Weight hosting is recorded separately in `distribution_status.json`; code and
-score publication alone does not imply the weights are already hosted.
+Weight hosting and the verified SHA-256 are recorded in `distribution_status.json`.
+Download `model.safetensors` into this directory before running `verify_weights.py`.
 The frozen encoders and their terms are separate from this release. No new
 license grant for third-party encoders or datasets is implied.

@@ -2,8 +2,8 @@
   "revision_date": "2026-11-27",
   "files": {
     "README.md": {
-      "sha256": "c4643406cc21b524399641ec3427ca24e5e8d9cfc9e5a51307ac8bbc4423e1b5",
-      "bytes": 4502
+      "sha256": "c1cce1e892fff33002c464d645e4a52f0deaaf4057f053abdf9604db1f3b8efd",
+      "bytes": 4631
     },
     "adapter_model.py": {
       "sha256": "e887ce7871ffc73afa25efb16846456cae964d48ea7bbbc57e50fdacfb43a718",
@@ -18,8 +18,8 @@
       "bytes": 760
     },
     "distribution_status.json": {
-      "sha256": "4b036c963a1fade3c08e6b1d6e74019b5dc6ff6837ce0b697192d4e6aa19beb7",
-      "bytes": 191
+      "sha256": "bd1713f1dd7c0260f30189b26985d29a457f982251dc5f337cfc21d92bcbb9d0",
+      "bytes": 468
     },
     "evaluation_protocol.json": {
       "sha256": "06bf279d971e17f627c4852484b38aa4b96a53a1d7c80a156c329cdf59e04994",
@@ -85,5 +85,15 @@
       "sha256": "15fa5228208b67f9df76b6f9ecdd80d19c62fca52ab3eafc130ba30931c6f474",
       "bytes": 1719
     }
+  },
+  "external_weights": {
+    "revision_date": "2026-11-27",
+    "status": "Public weight size and LFS SHA-256 verified against the audited tensor export",
+    "weights_hosted": true,
+    "weights_repository": "https://huggingface.co/AlexLiu2023/Modest-Align-COCO-seed0",
+    "weights_revision": "7903592a3b9d44614eea90e7ac62ea979f4a14f0",
+    "weights_filename": "model.safetensors",
+    "weights_sha256": "6df22bca7bb1a9af2b50844e395537a1d73f117a9e223477d4caffd3e91432a5",
+    "weights_bytes": 441767204
   }
 }
